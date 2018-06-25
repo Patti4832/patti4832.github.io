@@ -7,7 +7,6 @@ Header
 var latestitems = `
     <h3>Aktuelles</h3>
     <h4>Keine aktuellen Projekte</h4>
-
 `;
 
 function printer(objid, printtext, pto) {
@@ -27,7 +26,6 @@ function allstarter(){
     var outp = " Willkommen auf meiner Webseite!";
     printer(objid, outp, 50);
     printer("headl", "Patti4832 - Github Blog", 100);
-    printer("a1", latestitems, 100);
     loadnav();
 }
 
@@ -70,4 +68,8 @@ var navigationitems =
 
 function loadnav(){
     document.getElementById("navbar").innerHTML = navigationitems;
+}
+
+function loadaside(){
+    document.getElementById("a1").innerHTML = latestitems;
 }
