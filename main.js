@@ -66,6 +66,7 @@ function allstarter(){
     printer("headl", "Patti4832 - Github Blog", 100);
     loadnav();
     loadaside();
+    loadfooter();
 }
 
 function loadnav(){
