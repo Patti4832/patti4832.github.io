@@ -27,6 +27,7 @@ function allstarter(){
     printer(objid, outp, 50);
     printer("headl", "Patti4832 - Github Blog", 100);
     loadnav();
+    loadaside();
 }
 
 var navigationitems = 
