@@ -34,7 +34,6 @@ var navigationitems = `
         <br>
         <li><a href="https://patti4832.github.io/Anwendungen/">Anwendungen</a>
         <ol>
-            <li><a href="https://patti4832.github.io/Anwendungen/#cpp">C/C++</a></li>
             <li><a href="https://patti4832.github.io/Anwendungen/#csharp">C# (.NET)</a></li>
         </ol>
         </li>
