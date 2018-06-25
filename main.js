@@ -25,6 +25,12 @@ function allstarter(){
     loadnav();
 }
 
+var latestitems = `
+    <h3>Aktuelles</h3>
+    <h4>Keine aktuellen Projekte</h4>
+
+`;
+
 var navigationitems = 
     `
     
