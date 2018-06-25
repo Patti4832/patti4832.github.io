@@ -43,7 +43,7 @@ var navigationitems = `
 `;
 
 var footeritems = `
-    <p>Kontakt</p>
+    <p><a href="https://patti4832.github.io/impressum.html">Kontakt</a></p>
 `;
 
 function printer(objid, printtext, pto) {
