@@ -4,6 +4,12 @@ Header
 
 */
 
+var latestitems = `
+    <h3>Aktuelles</h3>
+    <h4>Keine aktuellen Projekte</h4>
+
+`;
+
 function printer(objid, printtext, pto) {
     var left = 0;
     let printit = setInterval(function () {
@@ -21,15 +27,9 @@ function allstarter(){
     var outp = " Willkommen auf meiner Webseite!";
     printer(objid, outp, 50);
     printer("headl", "Patti4832 - Github Blog", 100);
-    printer("a1", "Aktuelles", 100);
+    printer("a1", latestitems, 100);
     loadnav();
 }
-
-var latestitems = `
-    <h3>Aktuelles</h3>
-    <h4>Keine aktuellen Projekte</h4>
-
-`;
 
 var navigationitems = 
     `
