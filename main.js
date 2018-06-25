@@ -6,7 +6,7 @@ Header
 
 var latestitems = `
     <h3>Aktuelles</h3>
-    <h4>Keine aktuellen Projekte</h4>
+    <h4>IoT Database Server</h4>
 `;
 
 var navigationitems = `
