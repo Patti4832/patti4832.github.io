@@ -9,30 +9,7 @@ var latestitems = `
     <h4>Keine aktuellen Projekte</h4>
 `;
 
-function printer(objid, printtext, pto) {
-    var left = 0;
-    let printit = setInterval(function () {
-        if (left >= printtext.length) { 
-            clearInterval(printit);
-        } else {
-            document.getElementById(objid).innerHTML += printtext.charAt(left);
-        }
-        left += 1;
-    }, pto);
-}
-
-function allstarter(){
-    var objid = "pmain1";
-    var outp = " Willkommen auf meiner Webseite!";
-    printer(objid, outp, 50);
-    printer("headl", "Patti4832 - Github Blog", 100);
-    loadnav();
-    loadaside();
-}
-
-var navigationitems = 
-    `
-    
+var navigationitems = `
     <h3>Navigation</h3>
     <ul>
         <li><a href="https://github.com/Patti4832">Github</a></li>
@@ -64,8 +41,32 @@ var navigationitems =
         <br>
         <li><a href="https://patti4832.github.io/Hausautomation/">Hausautomation</a></li>
     </ul>
-    
-    `;
+`;
+
+var footeritems = `
+    <p>Kontakt</p>
+`;
+
+function printer(objid, printtext, pto) {
+    var left = 0;
+    let printit = setInterval(function () {
+        if (left >= printtext.length) { 
+            clearInterval(printit);
+        } else {
+            document.getElementById(objid).innerHTML += printtext.charAt(left);
+        }
+        left += 1;
+    }, pto);
+}
+
+function allstarter(){
+    var objid = "pmain1";
+    var outp = " Willkommen auf meiner Webseite!";
+    printer(objid, outp, 50);
+    printer("headl", "Patti4832 - Github Blog", 100);
+    loadnav();
+    loadaside();
+}
 
 function loadnav(){
     document.getElementById("navbar").innerHTML = navigationitems;
@@ -73,4 +74,8 @@ function loadnav(){
 
 function loadaside(){
     document.getElementById("a1").innerHTML = latestitems;
+}
+
+function loadfooter(){
+    document.getElementById("f1").innerHTML = footeritems;
 }
