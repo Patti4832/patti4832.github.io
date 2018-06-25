@@ -32,11 +32,9 @@ var navigationitems = `
         </ol>
         </li>
         <br>
-        <li><a href="https://patti4832.github.io/Anwendungen/">Anwendungen</a>
-        <ol>
-            <li><a href="https://patti4832.github.io/Anwendungen/#csharp">C# (.NET)</a></li>
-        </ol>
-        </li>
+        <li><a href="https://patti4832.github.io/Anwendungen/">C# Anwendungen</a></li>
+        <br>
+        <li><a href="https://patti4832.github.io/Apps/">Android Apps</a></li>
         <br>
         <li><a href="https://patti4832.github.io/Hausautomation/">Hausautomation</a></li>
     </ul>
