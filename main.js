@@ -15,6 +15,8 @@ var navigationitems = `
     <ul>
         <li><a href="https://github.com/Patti4832">Github</a></li>
         <br>
+        <li><a href="https://discord.gg/39Y4MgA">Discord</a></li>
+        <br>
         <li><a href="https://patti4832.github.io/">Home</a></li>
         <br>
         <li><a href="https://patti4832.github.io/Mikrocontroller/">Mikrocontroller</a>
