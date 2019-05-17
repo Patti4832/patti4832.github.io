@@ -28,7 +28,7 @@ nav {
     min-width: 150px;
     float: left;
     margin: 0px;
-    padding: 5px;
+    padding: 15px;
     border: .5px solid gray;
     border-collapse: collapse;
 }
@@ -39,7 +39,7 @@ aside {
     min-width: 150px;
     float: right;
     margin: 0px;
-    padding: 5px;
+    padding: 15px;
     border: .5px solid gray;
     border-collapse: collapse;
 }
@@ -47,7 +47,7 @@ aside {
 main {
     height: 5000px;
     margin: 0px;
-    padding: 5px;
+    padding: 15px;
     border: .5px solid gray;
     border-collapse: collapse;
 }
@@ -58,7 +58,7 @@ footer {
     width: 99%;
     clear: both;
     margin: 0px;
-    padding: 5px;
+    padding: 15px;
     border-collapse: collapse;
 }
 
