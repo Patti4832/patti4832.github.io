@@ -25,14 +25,6 @@ var navigationitems = `
         </ol>
         </li>
         <br>
-        <li><a href="https://patti4832.github.io/Webseiten/">Webseiten</a>
-        <ol>
-            <li><a href="https://patti4832.github.io/Webseiten/#html">HTML</a></li>
-            <li><a href="https://patti4832.github.io/Webseiten/#css">CSS</a></li>
-            <li><a href="https://patti4832.github.io/Webseiten/#js">JavaScript</a></li>
-        </ol>
-        </li>
-        <br>
         <li><a href="https://patti4832.github.io/Anwendungen/">Anwendungen</a></li>
         <br>
         <li><a href="https://patti4832.github.io/Apps/">Android Apps</a></li>
