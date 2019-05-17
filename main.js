@@ -41,7 +41,7 @@ var navigationitems = `
         <br>
         <li><a href="https://patti4832.github.io/Hausautomation/">Hausautomation</a></li>
         <br>
-        <li><a href="httpa://patti4832.github.io/Projektarbeit/">Projektarbeit</a></li>
+        <li><a href="https://patti4832.github.io/Projektarbeit/">Projektarbeit</a></li>
     </ul>
 `;
 
