@@ -47,7 +47,7 @@ aside {
 main {
     height: 5000px;
     margin: 0px;
-    padding: 5px;
+    padding: 50px;
     border: .5px solid gray;
     border-collapse: collapse;
 }
