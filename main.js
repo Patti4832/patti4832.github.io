@@ -40,6 +40,8 @@ var navigationitems = `
         <li><a href="https://patti4832.github.io/Apps/">Android Apps</a></li>
         <br>
         <li><a href="https://patti4832.github.io/Hausautomation/">Hausautomation</a></li>
+        <br>
+        <li><a href="httpa://patti4832.github.io/Projektarbei/">Projektarbeit</a></li>
     </ul>
 `;
 
