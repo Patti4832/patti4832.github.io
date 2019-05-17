@@ -1,37 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Patti4832 - Github Blog</title>
-        <meta http-equiv="refresh" content="5;https://patti4832.github.io/">
-        <link rel="stylesheet" href="../style.css">
-        <script type="application/javascript" src="../main.js"></script>
-        <style>
-            body {
-                background-color: red;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>404 Nicht gefunden!</h1>
-        </header>
-        
-        <nav id="navbar"><!--Filled by function--></nav>
-        <aside>
-            <h3 id="a1"></h3>
-        </aside>
-        <main>
-            <h1>404 Nicht gefunden!</h1>
-            <h2>Sie werden in 5 Sekunden zur Hauptseite weitergeleitet!</h2>
-        </main>
-        <footer>
-            <p id="f1"><!--Filled by function--></p>
-        </footer>
-        
-        <script>
-            loadnav();
-            loadaside();
-            loadfooter();
-        </script>
-    </body>
+  <head>
+    <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-box position="0 2 -2" rotation="" color="red" value="Test" material="" geometry="" background=""></a-box>
+        <a-plane position="" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" material="color: #000000" geometry="height: 3" scale="100 100 1"></a-plane>
+        <a-entity position="0.5 2 -1.4" text="width: 2; lineHeight: 50; letterSpacing: 5; color: white; value: 404 Nicht gefunden!" rotation="0 0 0"></a-entity>
+        <a-entity light="intensity: 10" id="light" rotation="180 0 0" position="0 5 2"></a-entity>
+        <a-sky color="#000000"></a-sky>
+    </a-scene>
+  </body>
 </html>
