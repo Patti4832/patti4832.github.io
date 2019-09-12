@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spielesammlung - TicTacToe</title>
+        <style>
+            button {
+                height: 100px;
+                width: 100px;
+            }
+            #kib {
+                height: auto;
+                width: auto;
+            }
+        </style>
+        <script>
+            var counter = 0;
+            var fields = [[' ', ' ', ' '],      //00 01 02
+                          [' ', ' ', ' '],      //10 11 12
+                          [' ', ' ', ' ']];     //20 21 22
+            
+            var plnow = "X";
+            var playing = true;
+            
+            function selF(field){
+                //X or O
+                var player = "O";
+                plnow = "X";
+                
+                if((counter%2)==0){
+                    player = "X";
+                    plnow = "O";
+                }
+                
+                //Set to field
+                document.getElementById("f"+field).innerHTML = player;
+                var x = Math.floor(field/3);
+                var y = (field%3);
+                fields[x][y] = player;
+                
+                //Check for win
+                if(fields[x][0]==player && fields[x][1]==player && fields[x][2]==player ||
+                   fields[0][y]==player && fields[1][y]==player && fields[2][y]==player ||
+                   fields[0][0]==player && fields[1][1]==player && fields[2][2]==player ||
+                   fields[0][2]==player && fields[1][1]==player && fields[2][0]==player ){
+                    
+                    alert("Player " + player + " wins!");
+                }
+                
+                //Check for End of Game
+                if(counter==8){
+                    playing = false;
+                    alert("Game over!");
+                }
+                
+                counter++;
+                document.getElementById("plnow").innerHTML = plnow;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>TicTacToe</h1>
+        <br>
+        <h2>Aktuell am Zug: </h2>
+        <p id="plnow">X</p>
+        <br>
+        <button id="kib" onclick="ki()">KI Zug</button>
+        <br>
+        <br>
+        <table>
+            <tr><td><button id="f0" onclick="selF(0)"></button></td><td><button id="f1" onclick="selF(1)"></button></td><td><button id="f2" onclick="selF(2)"></button></td></tr>
+            <tr><td><button id="f3" onclick="selF(3)"></button></td><td><button id="f4" onclick="selF(4)"></button></td><td><button id="f5" onclick="selF(5)"></button></td></tr>
+            <tr><td><button id="f6" onclick="selF(6)"></button></td><td><button id="f7" onclick="selF(7)"></button></td><td><button id="f8" onclick="selF(8)"></button></td></tr>
+        </table>
+    </body>
+</html>
