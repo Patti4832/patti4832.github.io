@@ -20,23 +20,9 @@
             
             var plnow = "X";
             var playing = true;
+            var end = false;
             
-            function selF(field){
-                //X or O
-                var player = "O";
-                plnow = "X";
-                
-                if((counter%2)==0){
-                    player = "X";
-                    plnow = "O";
-                }
-                
-                //Set to field
-                document.getElementById("f"+field).innerHTML = player;
-                var x = Math.floor(field/3);
-                var y = (field%3);
-                fields[x][y] = player;
-                
+            function check(player, x, y){
                 //Check for win
                 if(fields[x][0]==player && fields[x][1]==player && fields[x][2]==player ||
                    fields[0][y]==player && fields[1][y]==player && fields[2][y]==player ||
@@ -44,6 +30,7 @@
                    fields[0][2]==player && fields[1][1]==player && fields[2][0]==player ){
                     
                     alert("Player " + player + " wins!");
+                    playing = false;
                 }
                 
                 //Check for End of Game
@@ -51,9 +38,111 @@
                     playing = false;
                     alert("Game over!");
                 }
-                
+            }
+            
+            function next(){
+                plnow = "X";
+                if((counter%2)==0){
+                    plnow = "O";
+                }
                 counter++;
                 document.getElementById("plnow").innerHTML = plnow;
+            }
+            
+            function selF(field){
+                if(playing){
+                    //Set to field
+                    var x = Math.floor(field/3);
+                    var y = (field%3);
+                    end = false;
+                    set(x, y);
+                    
+                    next();
+                    
+                    var ki_on = document.getElementById("cbKi").checked;
+                    if(ki_on){
+                        ki();
+                    }
+                }
+            }
+            
+            function ki(){
+                if(playing){
+                    var enemy = "O";
+                    end = false;
+                    if(plnow=="O"){
+                        enemy = "X";
+                    }
+                
+                    //Rows
+                    for(var i = 0; i < 3; i++){
+                        if(fields[i][0]==enemy && fields[i][1]==enemy && fields[i][2]==' '){
+                            set(i, 2);
+                        }
+                        else if(fields[i][0]==enemy && fields[i][1]==' ' && fields[i][2]==enemy){
+                            set(i, 1);
+                        }
+                        else if(fields[i][0]==' ' && fields[i][1]==enemy && fields[i][2]==enemy){
+                            set(i, 0);
+                        }
+                    }
+                    //Columns
+                    for(var i = 0; i < 3; i++){
+                        if(fields[0][i]==enemy && fields[1][i]==enemy && fields[2][i]==' '){
+                            set(2, i);
+                        }
+                        else if(fields[0][i]==enemy && fields[1][i]==' ' && fields[2][i]==enemy){
+                            set(1, i);
+                        }
+                        else if(fields[0][i]==' ' && fields[1][i]==enemy && fields[2][i]==enemy){
+                            set(0, i);
+                        }
+                    }
+                    //  / and \
+                    if(fields[0][0]==enemy && fields[1][1]==' ' && fields[2][2]==enemy ||
+                       fields[0][2]==enemy && fields[1][1]==' ' && fields[2][0]==enemy ){
+                        set(1, 1);
+                    }
+                    else if(fields[0][0]==enemy && fields[1][1]==enemy && fields[2][2]==' '){
+                        set(2, 2);
+                    }
+                    else if(fields[0][0]==' ' && fields[1][1]==enemy && fields[2][2]==enemy){
+                        set(0, 0);
+                    }
+                    
+                    else if(fields[0][2]==enemy && fields[1][1]==enemy && fields[2][0]==' '){
+                        set(2, 0);
+                    }
+                    else if(fields[0][2]==' ' && fields[1][1]==enemy && fields[2][0]==enemy){
+                        set(0, 2);
+                    }
+                    
+                    
+                    if(end){
+                        next();
+                    }
+                    else{
+                        //Set random
+                        for(var i = 0; i < 3; i++){
+                            for(var j = 0; j < 3; j++){
+                                if(fields[i][j]==' '){
+                                    set(i, j);
+                                }
+                            }
+                        }
+                        next();
+                    }
+                }
+            }
+            
+            function set(x, y){
+                if(!end){
+                    var field = (x*3) + y;
+                    document.getElementById("f"+field).innerHTML = plnow;
+                    fields[x][y] = plnow;
+                    check(plnow, x, y);
+                    end = true;
+                }
             }
         </script>
     </head>
@@ -63,6 +152,7 @@
         <h2>Aktuell am Zug: </h2>
         <p id="plnow">X</p>
         <br>
+        <input type="checkbox" id="cbKi">KI aktivieren<br><br>
         <button id="kib" onclick="ki()">KI Zug</button>
         <br>
         <br>
