@@ -123,13 +123,14 @@
                     }
                     else{
                         //Set random
-                        for(var i = 0; i < 3; i++){
-                            for(var j = 0; j < 3; j++){
-                                if(fields[i][j]==' '){
-                                    set(i, j);
-                                }
+                        do{
+                            var rand = Math.floor(Math.random() * 9);
+                            var x = Math.floor(rand/3);
+                            var y = (rand%3);
+                            if(fields[x][y]==' '){
+                                set(x, y);
                             }
-                        }
+                        }while(!end);
                         next();
                     }
                 }
