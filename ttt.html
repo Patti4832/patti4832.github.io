@@ -138,9 +138,13 @@
             function set(x, y){
                 if(!end){
                     var field = (x*3) + y;
-                    document.getElementById("f"+field).innerHTML = plnow;
-                    fields[x][y] = plnow;
-                    check(plnow, x, y);
+                    if(fields[x][y]==' '){
+                        var button = document.getElementById("f"+field);
+                        button.innerHTML = plnow;
+                        button.disabled = true;
+                        fields[x][y] = plnow;
+                        check(plnow, x, y);
+                    }
                     end = true;
                 }
             }
